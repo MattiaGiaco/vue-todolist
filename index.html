@@ -27,7 +27,7 @@
     <ul>
       <li v-for="(item, index) in todoList">
         <p :class="{check : item.check}">{{item.text}}</p>
-        <i class="fas fa-times"></i>
+        <i @click="removeItem(index)" class="fas fa-times"></i>
       </li>
     </ul>
   </div>

@@ -26,6 +26,8 @@ const app = new Vue({
     }
   },
   methods:{
-    
+    removeItem(index){
+      this.todoList.splice(index,1);
+    }
     }
 });
