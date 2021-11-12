@@ -17,16 +17,25 @@
     </div>
       
     <div class="container">
+      <h3 v-if="error">
+        Inserisci almeno 3 caratteri!
+      </h3>
       <input 
+      @keyup.enter="addItem"
+      v-model="newItem.text"
       type="text" placeholder="Nuovo ToDo">
-      <button>
+      <button @click="addItem">
         <strong>Aggiungi</strong>
       </button>
     </div>
 
     <ul>
       <li v-for="(item, index) in todoList">
-        <p :class="{check : item.check}">{{item.text}}</p>
+        <p 
+        @click="item.check = !item.check"
+        :class="{check : item.check}">
+          {{item.text}}
+        </p>
         <i @click="removeItem(index)" class="fas fa-times"></i>
       </li>
     </ul>

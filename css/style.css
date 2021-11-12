@@ -49,23 +49,37 @@ button{
   cursor: pointer;
 }
 
+h3{
+  color: rgb(218, 70, 70);
+}
+
 ul{
   width: 1000px;
   margin: 30px auto;
   padding: 30px 20px;
   list-style: none;
-  background-color: lightgray;
+  background-color: rgb(202, 231, 202);
+  border-radius: 10px;
 }
 
 ul li{
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+ul li:last-child{
+  border-bottom: none;
 }
 
 ul li .fa-times{
   color: gray;
+  cursor: pointer;
+}
+
+ul li p{
+  font-weight: 600;
   cursor: pointer;
 }
 
