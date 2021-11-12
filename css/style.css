@@ -68,3 +68,8 @@ ul li .fa-times{
   color: gray;
   cursor: pointer;
 }
+
+.check{
+  color: gray;
+  text-decoration: line-through;
+}
